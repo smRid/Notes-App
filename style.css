@@ -65,6 +65,8 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .title-input,
@@ -105,3 +107,98 @@ body{
 .note-btn:hover{
     background-color: #a7a7a7;
 }
+
+.note{
+    width: var(--width);
+    height: var(--width);
+    background-color: #1c1917;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid #ffffff49;
+}
+
+.title,
+.note-text{
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 1rem;
+    outline: 0.1rem solid #000;
+    transition: outline 0.2s;
+    position: relative;
+    overflow-y: auto;
+    clip-path: inset(0 round 1rem);
+}
+
+.title::-webkit-scrollbar,
+.note-text::-webkit-scrollbar{
+    width: 0.4rem;
+    background-color: #887;
+    border-radius: 0.5rem;
+}
+
+.title::-webkit-scrollbar-thumb,
+.note-text::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+}
+
+.title{
+    height: 30%;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.note-text{
+    height: 50%;
+    font-size: 2rem;
+}
+
+.title:focus,
+.note-text:focus{
+    outline: 0.1rem solid var(--primary-color);
+}
+
+.title::before,
+.note-text:before{
+    content: "Edit mode";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2rem;
+    border-radius: 0 0 0 0.4rem;
+    padding: 0.1rem 0.5rem;
+    background-color: var(--primary-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.title:focus::before,
+.note-text:focus:before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.settings{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date{
+    font-size:1.6rem;
+}
+
+.delete-btn{
+    font-size: 2rem;
+}
+
