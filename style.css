@@ -67,6 +67,13 @@ body{
     row-gap: 1rem;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s ease, visdibility 0.5s ease;
+}
+
+
+.new-note.active  .note-form {
+    opacity: 1;
+    visibility: visible;
 }
 
 .title-input,
