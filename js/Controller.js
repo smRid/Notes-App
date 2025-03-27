@@ -51,17 +51,16 @@ class Controller {
             console.log('New note created:', note);
 
             this.getData.push(note);
-            this.setData(this.getData); // Save to local storage
+            this.setData(this.getData); 
             createNoteHTML(note, noteFiles);
 
-            // Reset the form and hide the note form UI
             newNote.classList.remove('active');
             console.log("Active class removed from newNote:", newNote.classList.contains('active'));
             noteTitle.value = '';
             noteText.value = '';
 
-            this.deleteNote(); // Attach delete listeners to the new delete button
-            this.editNote(); // Attach edit listeners to the new note elements
+            this.deleteNote(); 
+            this.editNote(); 
         });
     }
 
