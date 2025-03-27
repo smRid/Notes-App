@@ -35,7 +35,7 @@ body{
     margin-bottom: 3rem;
 }
 
-.new-notes{
+.new-note{
     width: var(--width);
     aspect-ratio: 1;
     border: 0.2rem dashed var(--white-color);
@@ -46,15 +46,62 @@ body{
     justify-content: center;
     row-gap: 1rem;
     cursor: pointer;
+    position: relative;
 }
 
-.new-notes i{
+.new-note i{
     color: var(--primary-color);
     font-size: 8rem;
 }
 
-.new-notes h3{
+.new-note h3{
     font-size: 2rem;
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+.note-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.title-input,
+.note-text-input{
+    width: 22rem;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: var(--border);
+    border-radius: 0.3rem;
+    outline: none;
+    font-size: 1rem;
+    color: var(--white-color);
+    resize: none;
+}
+
+.note-text-input{
+    height: 7rem;
+}
+
+.title-input::placeholder,
+.note-text-input::placeholder{
+    color: var(--white-color);
+}
+
+.note-btn{
+    width: max-content;
+    background-color: rgba(255, 255, 255, 741);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.4rem 0.6rem;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.note-btn:hover{
+    background-color: #a7a7a7;
 }
