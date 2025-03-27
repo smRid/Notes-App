@@ -1,5 +1,60 @@
+:root{
+    --width: 30rem;
+    --border: -1rem;
+    --primary-color: #22c55e;
+    --secondary-color: #555;
+    --white-color: #fff;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: black;
+}
+
+.notes-app{
+    padding: 3rem;
+}
+
+.note-files{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.new-notes{
+    width: var(--width);
+    aspect-ratio: 1;
+    border: 0.2rem dashed var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    cursor: pointer;
+}
+
+.new-notes i{
+    color: var(--primary-color);
+    font-size: 8rem;
+}
+
+.new-notes h3{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
