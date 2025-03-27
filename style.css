@@ -67,7 +67,7 @@ body{
     row-gap: 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visdibility 0.5s ease;
+    transition: opacity 0.3s ease, visibility 0.5s ease;
 }
 
 
