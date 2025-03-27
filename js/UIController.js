@@ -1,7 +1,6 @@
 class UIController {
     constructor() {
-        this.Notes = () =>[ ...document.querySelectorAll('note')]
-        this.deleteBtn = [...document.querySelectorAll('.delete-btn')];
+        this.Notes = () => [...document.querySelectorAll('.note')]; // Dynamically fetch notes
         this.newNote = document.querySelector('.new-note');
         this.noteFiles = document.querySelector('.note-files');
         this.noteTitle = document.querySelector('.title-input');
@@ -9,12 +8,16 @@ class UIController {
         this.noteBtn = document.querySelector('.note-btn');
     }
 
+    deleteBtns() {
+        return [...document.querySelectorAll('.delete-btn')]; // Dynamically fetch delete buttons
+    }
+
     createNoteHTML(note, noteFiles) {
         const noteElement = document.createElement('div');
         noteElement.classList.add('note');
         noteElement.innerHTML = `
-            <h2 class="title">${note.title}</h2>
-            <p class="note-text">${note.text}</p> <!-- Ensure the text is rendered here -->
+            <h2 class="title" contenteditable="true">${note.title}</h2>
+            <p class="note-text" contenteditable="true">${note.text}</p>
             <div class="settings">
                 <span class="date">${note.date}</span>
                 <a href="#" class="delete-btn">

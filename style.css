@@ -38,7 +38,7 @@ body{
 .new-note{
     width: var(--width);
     aspect-ratio: 1;
-    border: 0.2rem dashed var(--white-color);
+    border: 0.5rem dashed var(--white-color);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ body{
 
 .title-input,
 .note-text-input{
-    width: 22rem;
+    width: 25rem;
     background-color: var(--primary-color);
     padding: 0.5rem 1rem;
     border: var(--border);
@@ -108,6 +108,7 @@ body{
     color: #333;
     border: none;
     cursor: pointer;
+    border-radius: 0.3rem;
     transition: background-color 0.3s;
 }
 
